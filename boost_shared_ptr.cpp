@@ -1,17 +1,11 @@
-/************************************************************
- *
- *	Copyright (c) Nokia Siemens Networks 2009
- *
- ************************************************************/
-
 /**
  *  @file   boost_shared_ptr.cpp
  *  @brief  examples of shared_ptr usage with custom deleter
  *  @author Karol Barski
  *  @date   Thu Sep 17 09:09:41 2009
  *
- *  @history
- *  @item Thu Sep 17 09:09:41 2009 Karol Barski: Created
+ *  @par history
+ *  @li Thu Sep 17 09:09:41 2009 Karol Barski: Created
  *
  */
 

@@ -1,17 +1,11 @@
-/************************************************************
- *
- *	Copyright (c) Nokia Siemens Networks 2009
- *
- ************************************************************/
-
 /**
  *  @file   shared_ptr_custom_deleter_test.cpp
  *  @brief  Test program for custom deleter taking argument as pointer to pointer
  *  @author Karol Barski
  *  @date   Fri Sep 11 12:56:20 2009
  *
- *  @history
- *  @item Fri Sep 11 12:56:20 2009 Karol Barski: Created
+ *  @par history
+ *  @li Fri Sep 11 12:56:20 2009 Karol Barski: Created
  *
  */
 
