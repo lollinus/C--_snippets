@@ -1,0 +1,11 @@
+boost_shared_ptr.cpp
+    Examples on boost::shared_ptr usage
+
+shared_ptr_custom_deleter_test.cpp 
+    Example how to use boost::shared_ptr with different custom deleters
+
+koenig_lookup.cpp 
+    Program to check how koenig lookup works
+
+partial_sum.cpp
+    Example about std::partial_sum usage
