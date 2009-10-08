@@ -1,8 +1,10 @@
 
 CXX = g++
-INC = -I$(HOME)/include -I/usr/local/include/ -I$(HOME)/include/boost-1_32
-LIB = -L$(HOME)/lib -lboost_thread
+INC = -I/usr/local/include/ -I$(HOME)include
+LIB = -L/usr/local/lib -lboost_thread
 
+all: fibonacci
 
-fibonacci:  fibonacci.cpp
-	$(CXX) $(INC) $(LIB) -o $@ $<
+fibonacci: boost_task_fibonacci.cpp
+	$(CXX) $(INC) $(LIB) -o $@ $?
+
