@@ -1,24 +1,22 @@
 #include <iostream>
 #include <boost/task.hpp>
 
-long fibonacci( long n)
-{
-	if ( n == 0) return 0;
-	if ( n == 1) return 1;
-	long k1( 1), k2( 0);
-	for ( int i( 2); i <= n; ++i)
-	{
-		long tmp( k1);
+long fibonacci(long n) {
+	if ( n==0) return 0;
+	if ( n==1) return 1;
+	long k1(1), k2(0);
+	for(int i(2); i<=n; ++i) {
+		long tmp(k1);
 		k1 = k1 + k2;
 		k2 = tmp;
 	}
 	return k1;
 }
 
-void main()
+int main(int argc, char** argv)
 {
 	// create a thread-pool
-	boost::task::static_pool< boost::task::unbounded_twolock_fifo > > pool( boost::task::poolsize( 5) );
+	boost::task::static_pool< boost::task::unbounded_twolock_fifo > > pool(boost::task::poolsize(5));
 
 	// execute tasks in thread-pool
 	// move tasks ownership to executor
@@ -26,10 +24,10 @@ void main()
 		boost::task::async(
 			boost::task::make_task( fibonacci, 10),
 			pool);
-	boost::task::handle< long > h2(
+	boost::task::handle<long> h2(
 		boost::task::async(
 			boost::task::make_task( fibonacci, 5),
-			boost::move( t2),
+			boost::move(t2),
 			pool);
 
 	std::cout << "h1: is ready == " << std::boolalpha << h1.is_ready() << "\n";
