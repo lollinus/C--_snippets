@@ -9,3 +9,18 @@ koenig_lookup.cpp
 
 partial_sum.cpp
     Example about std::partial_sum usage
+
+difftime_test.cpp
+    Test how difftime function behaves
+
+setw_setfill_test.cpp
+    Example of doing indentation stream modificator using setw and setfill
+
+snprintf.c
+    Test how snprintf behaves on buff too short for formatted string.
+
+
+TODO:
+    update makefile for all programs
+
+vim:tw=78:ts=4:et:norl:
